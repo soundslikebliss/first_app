@@ -1,3 +1,8 @@
+<% if user_signed_in? %>
+<h1>Rad Travel Photos Here</h1>
+<% else %>
+
+
 <div class="hero-unit">
 
 	<h1>Travel Photo Share</h1>
@@ -5,11 +10,11 @@
 		<p>
 			This is your new home for all of those fantastic photos you took on vacation. The aim is to not only store and view your own photos, but to share them with the world. Think of it as a giant travel photo album assembled by...everyone. 
 		</p>
+		<br>
+		<br>
 
-<div class= "btn btn-large">
-<p>
-<a href="#">Sign Up Now!</a>
-</p>
-</div>
+<%= link_to "Sign Up Now", new_user_registration_path, class: "btn btn-large" %>
 
 </div>
+
+<% end %>
