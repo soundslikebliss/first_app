@@ -1,9 +1,10 @@
 FirstApp::Application.routes.draw do
+ 
+
   resources :photos
 
 
   devise_for :users
-
   root :to => 'pages#home'
   get 'about' => 'pages#about'
 
