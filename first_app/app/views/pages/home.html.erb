@@ -3,18 +3,33 @@
 <% else %>
 
 
-<div class="hero-unit">
 
-	<h1>Travel Photo Share</h1>
 
-		<p>
-			This is your new home for all of those fantastic photos you took on vacation. The aim is to not only store and view your own photos, but to share them with the world. Think of it as a giant travel photo album assembled by...everyone. 
-		</p>
-		<br>
-		</br>
+	<div id="myCarousel" class="carousel slide">
+	  <ol class="carousel-indicators">
+	    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	    <li data-target="#myCarousel" data-slide-to="1"></li>
+	    <li data-target="#myCarousel" data-slide-to="2"></li>
+	  </ol>
+	  <!-- Carousel items -->
+	  <div class="carousel-inner">
+	    <div class="active item"><%= image_tag("DSCF3787.jpg") %></div>
+	    <div class="item"><%= image_tag("PC230484.jpg") %></div>
+	    <div class="item"><%= image_tag("PC240549.jpg") %></div>
+	  </div>
+	  <!-- Carousel nav -->
+	  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+	  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+	</div>
 
-<%= link_to "Sign Up Now", new_user_registration_path, class: "btn btn-large" %>
+			</br>
+		<h1>Travel Photo Share</h1>
+		<p>the new home for your travel photos</p>
+			</br>
+			</br>
 
-</div>
+	<%= link_to "Sign Up Now", new_user_registration_path, class: "btn btn-large" %>
+
+
 
 <% end %>

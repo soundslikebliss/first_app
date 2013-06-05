@@ -1,11 +1,15 @@
 class Photo < ActiveRecord::Base
 
-belongs_to :user
+	belongs_to :user
 
-  attr_accessible :description
+  	attr_accessible :description, :image
+  	has_attached_file :image
 
 
-  	
   	validates :description, presence: true
   	validates :user_id, presence:true
+  	validates_attachment :image, presence: true,
+  							content_type: { content_type: ['image/jpeg', 'image/jpg']},
+  							size: { less_than: 5.megabytes }
+
 end

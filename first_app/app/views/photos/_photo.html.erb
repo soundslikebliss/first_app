@@ -6,6 +6,6 @@
         <% if current_user == photo.user %>
         <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
         <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        	<% end %>
+        <% end %>
 
 </tr>
