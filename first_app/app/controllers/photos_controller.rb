@@ -1,8 +1,11 @@
 class PhotosController < ApplicationController
-  before_filter :authenticate_user!, except: [:index]
-
   # GET /photos
   # GET /photos.json
+
+    before_filter :authenticate_user!, except: [:index]
+    before_filter :prepare_categories 
+
+
   def index
     @photos = Photo.all
 
@@ -47,6 +50,7 @@ class PhotosController < ApplicationController
   def create
     @user = User.create(params[:user])
     @photo = current_user.photos.new(params[:photo])
+
     respond_to do |format|
       if @photo.save
         format.html { redirect_to @photo, notice: 'Photo was successfully created.' }
@@ -86,6 +90,10 @@ class PhotosController < ApplicationController
       format.html { redirect_to photos_url }
       format.json { head :no_content }
     end
+end
+    private
+    def prepare_categories
+    @categories = Category.all
   end
 end
 

@@ -1,5 +1,9 @@
 <div class= "hero-unit">
 <% if user_signed_in? %>
+
+<%= link_to "Upload Photos!", new_photo_path, class: "btn btn-large" %>
+</br>
+</br>
 <h1>Rad Travel Photos Here</h1>
 <% else %>
 
