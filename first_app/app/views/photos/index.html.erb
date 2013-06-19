@@ -1,21 +1,32 @@
-<h1>Photos</h1>
+<div class= "hero-unit">
+	<% if user_signed_in? %>
 
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>Description</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+		<div class= "well">
+			<h3>Travel Photo Share</h3>
+			<p>the new home for your travel photos</p>
+			</br>
+		<%= link_to "Upload Photos!", new_photo_path, class: "btn btn-large" %>
+		</div>
 
-  <tbody>
-    <%= render @photos %>
-  </tbody>
+		<%= render @photos %>
 
-</table>
+		</br>
 
-<br />
+		
+	<% else %>
 
-<%= link_to 'New Photo', new_photo_path %>
+		<h1>Travel Photo Share</h1>
+			<p>the new home for your travel photos</p>
+			</br>
+			</br>
+
+		
+		<%= link_to "Sign Up Now", new_user_registration_path, class: "btn btn-large" %>
+
+
+	<% end %>
+</div>
+  
+
+
+

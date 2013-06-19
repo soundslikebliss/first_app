@@ -4,5 +4,21 @@ class PagesController < ApplicationController
 
   def about
   end
+
+  def Africa
+  end
+
+  def Asia
+  end
+
+  def Europe
+  end
+
+  def NorthAmerica
+  end
+
+  def SouthAmerica
+  end
+  
   
 end

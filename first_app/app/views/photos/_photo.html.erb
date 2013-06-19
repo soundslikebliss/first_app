@@ -1,5 +1,7 @@
-<tr>
-		<td><%= image_tag photo.image(:medium) %></td>
+<div class="box img">
+		
+	<tr>
+		<td><%= image_tag photo.image %></td>
         <td><%= photo.description %></td>
 
         <td><%= link_to 'Show', photo %></td>
@@ -9,4 +11,7 @@
         <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %>
 
-</tr>
+	</tr>
+
+</div>
+	

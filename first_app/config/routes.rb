@@ -8,8 +8,13 @@ FirstApp::Application.routes.draw do
 
 
   devise_for :users
-  root :to => 'pages#home'
+  root :to => 'photos#index'
   get 'about' => 'pages#about'
+  get 'Africa' => 'pages#Africa'
+  get 'Asia' => 'pages#Asia'
+  get 'Europe' => 'pages#Europe'
+  get 'NorthAmerica' => 'pages#NorthAmerica'
+  get 'SouthAmerica' => 'pages#SouthAmerica'
 
 
   
