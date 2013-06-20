@@ -1,11 +1,9 @@
 FirstApp::Application.routes.draw do
  
-
   resources :categories
-
+  match 'categories/:id' => 'categories#show', as: :category
 
   resources :photos
-
 
   devise_for :users
   root :to => 'photos#index'
